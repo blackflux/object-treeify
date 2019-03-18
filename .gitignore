@@ -1,0 +1,28 @@
+# IDE Specific
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# OS Specific
+.DS_Store
+
+# Node Specific
+node_modules
+npm-debug.log
+yarn-error.log
+release.tar.gz
+
+# Test Specific
+coverage/
+.coveralls.yml
+.idea/dictionaries
+lib/
