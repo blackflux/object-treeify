@@ -18,14 +18,14 @@ describe('Testing Treeify', () => {
         }
       }
     })).to.deep.equal([
-      '├── page',
-      '|   ├── hello',
-      '|   |   └── index.css',
-      '|   └── world',
-      '|       ├── index.css',
-      '|       └── index.js',
-      '└── vendor',
-      '    └── index.js'
+      '├─ page',
+      '|  ├─ hello',
+      '|  |  └─ index.css',
+      '|  └─ world',
+      '|     ├─ index.css',
+      '|     └─ index.js',
+      '└─ vendor',
+      '   └─ index.js'
     ].join('\n'));
   });
 
@@ -74,13 +74,13 @@ describe('Testing Treeify', () => {
         'pink lady': null
       }
     })).to.deep.equal([
-      '├── apples',
-      '|   ├── gala',
-      '|   └── pink lady',
-      '└── oranges',
-      '    └── mandarin',
-      '        ├── clementine',
-      '        └── tangerine: so cheap and juicy!'
+      '├─ apples',
+      '|  ├─ gala',
+      '|  └─ pink lady',
+      '└─ oranges',
+      '   └─ mandarin',
+      '      ├─ clementine',
+      '      └─ tangerine: so cheap and juicy!'
     ].join('\n'));
   });
 });

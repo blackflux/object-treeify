@@ -3,10 +3,10 @@ const assert = require('assert');
 const buildCtx = (opts) => {
   const ctx = Object.assign({
     joined: true,
-    spacerNoNeighbour: '    ',
-    spacerNeighbour: '|   ',
-    keyNoNeighbour: '└── ',
-    keyNeighbour: '├── '
+    spacerNoNeighbour: '   ',
+    spacerNeighbour: '|  ',
+    keyNoNeighbour: '└─ ',
+    keyNeighbour: '├─ '
   }, opts);
   assert(typeof ctx.joined === 'boolean');
   assert(typeof ctx.spacerNoNeighbour === 'string');
