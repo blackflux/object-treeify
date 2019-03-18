@@ -27,11 +27,14 @@ Stringify Object as tree structure
 ```
 
 Project was inspired by [treeify](https://github.com/notatestuser/treeify) and works almost identical. However
-the algorithm is much shorter and faster, works without recursion and is very memory efficient.
+the algorithm is much shorter and faster, works without recursion and is very memory efficient. Furthermore
+the output is sorted alphabetically as one would expect.
 
-## Getting Started
+## Install
 
     $ npm install --save object-treeify
+
+## Usage
 
 <!-- eslint-disable import/no-unresolved -->
 ```js
@@ -52,13 +55,21 @@ treeify({
 
 // =>
 // ├─ apples,
-// |  ├─ gala,
-// |  └─ pink lady,
+// │  ├─ gala,
+// │  └─ pink lady,
 // └─ oranges,
 //   └─ mandarin,
 //      ├─ clementine,
 //      └─ tangerine: so cheap and juicy!
 ```
+
+### Features
+
+- Output is sorted alphabetically as one would expect
+- Very fast and memory efficient implementation
+- Input traversed exactly once
+- Dependency free and small in size
+- Tests to verify correctness
 
 ## Options
 
@@ -79,7 +90,7 @@ Prefix for depth level when no further neighbour is present.
 #### spacerNeighbour
 
 Type: `string`<br>
-Default: `|  `
+Default: `│  `
 
 Prefix for depth level when a further neighbour is present.
 

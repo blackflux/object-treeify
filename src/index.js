@@ -4,7 +4,7 @@ const buildCtx = (opts) => {
   const ctx = Object.assign({
     joined: true,
     spacerNoNeighbour: '   ',
-    spacerNeighbour: '|  ',
+    spacerNeighbour: '│  ',
     keyNoNeighbour: '└─ ',
     keyNeighbour: '├─ '
   }, opts);
@@ -16,19 +16,20 @@ const buildCtx = (opts) => {
   return ctx;
 };
 
+const sortFn = (a, b) => b.localeCompare(a);
+
 module.exports = (tree, opts = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
   const neighbours = [];
-  const keys = Object.keys(tree).sort().map(k => [k]);
+  const keys = Object.keys(tree).sort(sortFn).map(k => [k]);
   const lookup = [tree];
   while (keys.length !== 0) {
-    const key = keys.shift();
+    const key = keys.pop();
     const node = lookup[key.length - 1][key[key.length - 1]];
-    lookup[key.length] = node;
 
-    neighbours[key.length - 1] = keys.length !== 0 && keys[0].length === key.length;
+    neighbours[key.length - 1] = keys.length !== 0 && keys[keys.length - 1].length === key.length;
     result.push([
       neighbours.slice(0, key.length - 1).map(n => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join(''),
       neighbours[key.length - 1] ? ctx.keyNeighbour : ctx.keyNoNeighbour,
@@ -37,7 +38,8 @@ module.exports = (tree, opts = {}) => {
     ].join(''));
 
     if (node instanceof Object && !Array.isArray(node)) {
-      keys.unshift(...Object.keys(node).sort().map(k => key.concat(k)));
+      keys.push(...Object.keys(node).sort(sortFn).map(k => key.concat(k)));
+      lookup[key.length] = node;
     }
   }
 
