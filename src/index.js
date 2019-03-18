@@ -26,7 +26,6 @@ module.exports = (tree, opts = {}) => {
   while (keys.length !== 0) {
     const key = keys.shift();
     const node = lookup[key.length - 1][key[key.length - 1]];
-    lookup[key.length] = node;
 
     neighbours[key.length - 1] = keys.length !== 0 && keys[0].length === key.length;
     result.push([
@@ -38,6 +37,7 @@ module.exports = (tree, opts = {}) => {
 
     if (node instanceof Object && !Array.isArray(node)) {
       keys.unshift(...Object.keys(node).sort().map(k => key.concat(k)));
+      lookup[key.length] = node;
     }
   }
 
