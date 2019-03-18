@@ -14,13 +14,13 @@ Stringify Object as tree structure
 ```
 {
     oranges: {
-        'mandarin': {                                          ├─ oranges
-            clementine: null,                                  │  └─ mandarin
-            tangerine: 'so cheap and juicy!'        -=>        │     ├─ clementine
-        }                                                      │     └─ tangerine: so cheap and juicy!
-    },                                                         └─ apples
-    apples: {                                                     ├─ gala
-        'gala': null,                                             └─ pink lady
+        'mandarin': {                                          ├─ apples,
+            clementine: null,                                  │  ├─ gala
+            tangerine: 'so cheap and juicy!'        -=>        │  └─ pink lady
+        }                                                      └─ oranges
+    },                                                           └─ mandarin
+    apples: {                                                       ├─ clementine
+        'gala': null,                                               └─ tangerine: so cheap and juicy!
         'pink lady': null
     }
 }
@@ -54,12 +54,12 @@ treeify({
 }, {/* options */});
 
 // =>
-// ├─ apples,
-// │  ├─ gala,
-// │  └─ pink lady,
-// └─ oranges,
-//   └─ mandarin,
-//      ├─ clementine,
+// ├─ apples
+// │  ├─ gala
+// │  └─ pink lady
+// └─ oranges
+//   └─ mandarin
+//      ├─ clementine
 //      └─ tangerine: so cheap and juicy!
 ```
 
