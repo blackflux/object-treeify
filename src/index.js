@@ -27,11 +27,16 @@ module.exports = (tree, opts = {}) => {
     const node = key.reduce((p, c) => p[c], tree);
 
     neighbours[key.length - 1] = keys.length !== 0 && keys[0].length === key.length;
-    result.push(`${
-      neighbours.slice(0, key.length - 1).map(n => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join('')
-    }${neighbours[key.length - 1] ? ctx.keyNeighbour : ctx.keyNoNeighbour}${key[key.length - 1]}`);
+    result.push([
+      neighbours.slice(0, key.length - 1).map(n => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join(''),
+      neighbours[key.length - 1] ? ctx.keyNeighbour : ctx.keyNoNeighbour,
+      key[key.length - 1],
+      ['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : ''
+    ].join(''));
 
-    keys.unshift(...Object.keys(node).sort().map(k => key.concat(k)));
+    if (node instanceof Object && !Array.isArray(node)) {
+      keys.unshift(...Object.keys(node).sort().map(k => key.concat(k)));
+    }
   }
 
   return ctx.joined === true ? result.join('\n') : result;
