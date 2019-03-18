@@ -27,7 +27,7 @@ Stringify Object as tree structure
 ```
 
 Project was inspired by [treeify](https://github.com/notatestuser/treeify) and works almost identical. However
-the algorithm is much shorter and more concise.
+the algorithm is much shorter and faster, works without recursion and is very memory efficient.
 
 ## Getting Started
 
