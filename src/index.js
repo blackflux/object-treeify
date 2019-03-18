@@ -3,10 +3,10 @@ const assert = require('assert');
 const buildCtx = (opts) => {
   const ctx = Object.assign({
     joined: true,
-    spacerNoNeighbour: '    ',
-    spacerNeighbour: '|   ',
-    keyNoNeighbour: '└── ',
-    keyNeighbour: '├── '
+    spacerNoNeighbour: '   ',
+    spacerNeighbour: '|  ',
+    keyNoNeighbour: '└─ ',
+    keyNeighbour: '├─ '
   }, opts);
   assert(typeof ctx.joined === 'boolean');
   assert(typeof ctx.spacerNoNeighbour === 'string');
@@ -22,9 +22,11 @@ module.exports = (tree, opts = {}) => {
 
   const neighbours = [];
   const keys = Object.keys(tree).sort().map(k => [k]);
+  const lookup = [tree];
   while (keys.length !== 0) {
     const key = keys.shift();
-    const node = key.reduce((p, c) => p[c], tree);
+    const node = lookup[key.length - 1][key[key.length - 1]];
+    lookup[key.length] = node;
 
     neighbours[key.length - 1] = keys.length !== 0 && keys[0].length === key.length;
     result.push([
