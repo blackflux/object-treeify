@@ -18,7 +18,19 @@
     "type": "git",
     "url": "https://github.com/blackflux/object-treeify.git"
   },
-  "keywords": [],
+  "keywords": [
+    "object",
+    "tree",
+    "print",
+    "console",
+    "pretty",
+    "treeify",
+    "stringify",
+    "visualize",
+    "convert",
+    "string",
+    "debug"
+  ],
   "author": "Lukas Siemon",
   "license": "MIT",
   "bugs": {
