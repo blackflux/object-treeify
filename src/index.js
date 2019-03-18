@@ -4,7 +4,7 @@ const buildCtx = (opts) => {
   const ctx = Object.assign({
     joined: true,
     spacerNoNeighbour: '   ',
-    spacerNeighbour: '|  ',
+    spacerNeighbour: '│  ',
     keyNoNeighbour: '└─ ',
     keyNeighbour: '├─ '
   }, opts);
