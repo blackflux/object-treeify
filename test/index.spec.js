@@ -19,11 +19,11 @@ describe('Testing Treeify', () => {
       }
     })).to.deep.equal([
       '├─ page',
-      '|  ├─ hello',
-      '|  |  └─ index.css',
-      '|  └─ world',
-      '|     ├─ index.css',
-      '|     └─ index.js',
+      '│  ├─ hello',
+      '│  │  └─ index.css',
+      '│  └─ world',
+      '│     ├─ index.css',
+      '│     └─ index.js',
       '└─ vendor',
       '   └─ index.js'
     ].join('\n'));
@@ -75,8 +75,8 @@ describe('Testing Treeify', () => {
       }
     })).to.deep.equal([
       '├─ apples',
-      '|  ├─ gala',
-      '|  └─ pink lady',
+      '│  ├─ gala',
+      '│  └─ pink lady',
       '└─ oranges',
       '   └─ mandarin',
       '      ├─ clementine',
