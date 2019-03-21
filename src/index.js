@@ -42,7 +42,6 @@ module.exports = (tree, opts = {}) => {
       lookup[key.length] = node;
     }
   }
-  result.push('');
 
   return ctx.joined === true ? result.join('\n') : result;
 };
