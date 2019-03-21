@@ -25,7 +25,8 @@ describe('Testing Treeify', () => {
       '│     ├─ index.css',
       '│     └─ index.js',
       '└─ vendor',
-      '   └─ index.js'
+      '   └─ index.js',
+      ''
     ].join('\n'));
   });
 
@@ -57,7 +58,8 @@ describe('Testing Treeify', () => {
       '¦       +-- index.css',
       "¦       '-- index.js",
       "'-- vendor",
-      "    '-- index.js"
+      "    '-- index.js",
+      ''
     ]);
   });
 
@@ -80,7 +82,8 @@ describe('Testing Treeify', () => {
       '└─ oranges',
       '   └─ mandarin',
       '      ├─ clementine',
-      '      └─ tangerine: so cheap and juicy!'
+      '      └─ tangerine: so cheap and juicy!',
+      ''
     ].join('\n'));
   });
 
@@ -110,7 +113,8 @@ describe('Testing Treeify', () => {
       '   │  ├─ 6',
       '   │  └─ 5',
       '   └─ 2',
-      '      └─ 3'
+      '      └─ 3',
+      ''
     ].join('\n'));
   });
 });
