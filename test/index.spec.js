@@ -83,4 +83,34 @@ describe('Testing Treeify', () => {
       '      └─ tangerine: so cheap and juicy!'
     ].join('\n'));
   });
+
+  it('Testing Custom Sort Order', () => {
+    expect(treeify({
+      1: {
+        2: {
+          3: null
+        },
+        4: {
+          5: null,
+          6: null
+        }
+      },
+      7: {
+        8: null,
+        9: null
+      }
+    }, {
+      sortFn: (a, b) => Number(b) - Number(a)
+    })).to.deep.equal([
+      '├─ 7',
+      '│  ├─ 9',
+      '│  └─ 8',
+      '└─ 1',
+      '   ├─ 4',
+      '   │  ├─ 6',
+      '   │  └─ 5',
+      '   └─ 2',
+      '      └─ 3'
+    ].join('\n'));
+  });
 });

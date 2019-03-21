@@ -6,24 +6,24 @@ const buildCtx = (opts) => {
     spacerNoNeighbour: '   ',
     spacerNeighbour: '│  ',
     keyNoNeighbour: '└─ ',
-    keyNeighbour: '├─ '
+    keyNeighbour: '├─ ',
+    sortFn: (a, b) => a.localeCompare(b)
   }, opts);
   assert(typeof ctx.joined === 'boolean');
   assert(typeof ctx.spacerNoNeighbour === 'string');
   assert(typeof ctx.spacerNeighbour === 'string');
   assert(typeof ctx.keyNoNeighbour === 'string');
   assert(typeof ctx.keyNeighbour === 'string');
+  assert(typeof ctx.sortFn === 'function');
   return ctx;
 };
-
-const sortFn = (a, b) => b.localeCompare(a);
 
 module.exports = (tree, opts = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
   const neighbours = [];
-  const keys = Object.keys(tree).sort(sortFn).map(k => [k]);
+  const keys = Object.keys(tree).sort((a, b) => ctx.sortFn(b, a)).map(k => [k]);
   const lookup = [tree];
   while (keys.length !== 0) {
     const key = keys.pop();
@@ -38,7 +38,7 @@ module.exports = (tree, opts = {}) => {
     ].join(''));
 
     if (node instanceof Object && !Array.isArray(node)) {
-      keys.push(...Object.keys(node).sort(sortFn).map(k => key.concat(k)));
+      keys.push(...Object.keys(node).sort((a, b) => ctx.sortFn(b, a)).map(k => key.concat(k)));
       lookup[key.length] = node;
     }
   }

@@ -28,7 +28,7 @@ Stringify Object as tree structure
 
 Project was inspired by [treeify](https://github.com/notatestuser/treeify) and works almost identical. However
 the algorithm is much shorter and faster, works without recursion and is very memory efficient. Furthermore
-the output is sorted alphabetically as one would expect.
+the output can be sorted using a custom comparator function.
 
 ## Install
 
@@ -107,6 +107,13 @@ Type: `string`<br>
 Default: `├─ `
 
 Prefix for key when a further neighbour is present.
+
+#### sortFn
+
+Type: `function`<br>
+Default: `(a, b) => a.localeCompare(b)`
+
+Function that defines the key sort order.
 
 ## Examples
 
