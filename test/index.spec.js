@@ -17,15 +17,13 @@ describe('Testing Treeify', () => {
           'index.js': null
         }
       }
-    }, {
-      sortFn: (a, b) => a.localeCompare(b)
     })).to.deep.equal([
       '├─ page',
-      '│  ├─ hello',
+      '│  ├─ world',
+      '│  │  ├─ index.js',
       '│  │  └─ index.css',
-      '│  └─ world',
-      '│     ├─ index.css',
-      '│     └─ index.js',
+      '│  └─ hello',
+      '│     └─ index.css',
       '└─ vendor',
       '   └─ index.js'
     ].join('\n'));
@@ -50,15 +48,14 @@ describe('Testing Treeify', () => {
       spacerNoNeighbour: '    ',
       spacerNeighbour: '¦   ',
       keyNoNeighbour: '\'-- ',
-      keyNeighbour: '+-- ',
-      sortFn: (a, b) => a.localeCompare(b)
+      keyNeighbour: '+-- '
     })).to.deep.equal([
       '+-- page',
-      '¦   +-- hello',
+      '¦   +-- world',
+      '¦   ¦   +-- index.js',
       "¦   ¦   '-- index.css",
-      "¦   '-- world",
-      '¦       +-- index.css',
-      "¦       '-- index.js",
+      "¦   '-- hello",
+      "¦       '-- index.css",
       "'-- vendor",
       "    '-- index.js"
     ]);
