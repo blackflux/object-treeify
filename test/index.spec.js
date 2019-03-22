@@ -17,6 +17,8 @@ describe('Testing Treeify', () => {
           'index.js': null
         }
       }
+    }, {
+      sortFn: (a, b) => a.localeCompare(b)
     })).to.deep.equal([
       '├─ page',
       '│  ├─ hello',
@@ -48,7 +50,8 @@ describe('Testing Treeify', () => {
       spacerNoNeighbour: '    ',
       spacerNeighbour: '¦   ',
       keyNoNeighbour: '\'-- ',
-      keyNeighbour: '+-- '
+      keyNeighbour: '+-- ',
+      sortFn: (a, b) => a.localeCompare(b)
     })).to.deep.equal([
       '+-- page',
       '¦   +-- hello',
@@ -75,12 +78,12 @@ describe('Testing Treeify', () => {
       }
     })).to.deep.equal([
       '├─ apples',
-      '│  ├─ gala',
-      '│  └─ pink lady',
+      '│  ├─ pink lady',
+      '│  └─ gala',
       '└─ oranges',
       '   └─ mandarin',
-      '      ├─ clementine',
-      '      └─ tangerine: so cheap and juicy!'
+      '      ├─ tangerine: so cheap and juicy!',
+      '      └─ clementine'
     ].join('\n'));
   });
 
