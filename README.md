@@ -43,24 +43,24 @@ const treeify = require('object-treeify');
 treeify({
   oranges: {
     mandarin: {
-      tangerine: 'so cheap and juicy!'
       clementine: null,
+      tangerine: 'so cheap and juicy!'
     }
   },
   apples: {
-    'pink lady': null
     gala: null,
+    'pink lady': null
   }
 }, {/* options */});
 
 // =>
 // ├─ apples
-// │  ├─ gala
-// │  └─ pink lady
+// │  ├─ pink lady
+// │  └─ gala
 // └─ oranges
 //   └─ mandarin
-//      ├─ clementine
-//      └─ tangerine: so cheap and juicy!
+//      ├─ tangerine: so cheap and juicy!
+//      └─ clementine
 ```
 
 ### Features
