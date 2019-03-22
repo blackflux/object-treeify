@@ -15,12 +15,12 @@ Stringify Object as tree structure
 {
     oranges: {
         'mandarin': {                                          ├─ apples,
-            clementine: null,                                  │  ├─ gala
-            tangerine: 'so cheap and juicy!'        -=>        │  └─ pink lady
+            clementine: null,                                  │  ├─ pink lady
+            tangerine: 'so cheap and juicy!'        -=>        │  └─ gala
         }                                                      └─ oranges
     },                                                           └─ mandarin
-    apples: {                                                       ├─ clementine
-        'gala': null,                                               └─ tangerine: so cheap and juicy!
+    apples: {                                                       ├─ tangerine: so cheap and juicy!
+        'gala': null,                                               └─ clementine
         'pink lady': null
     }
 }
@@ -55,12 +55,12 @@ treeify({
 
 // =>
 // ├─ apples
-// │  ├─ gala
-// │  └─ pink lady
+// │  ├─ pink lady
+// │  └─ gala
 // └─ oranges
 //   └─ mandarin
-//      ├─ clementine
-//      └─ tangerine: so cheap and juicy!
+//      ├─ tangerine: so cheap and juicy!
+//      └─ clementine
 ```
 
 ### Features
@@ -111,9 +111,9 @@ Prefix for key when a further neighbour is present.
 #### sortFn
 
 Type: `function`<br>
-Default: `(a, b) => a.localeCompare(b)`
+Default: `null`
 
-Function that defines the key sort order.
+Function that defines the key sort order. Defaults to ordering of `Object.keys(...)`, which is typically insertion order.
 
 ## Examples
 
