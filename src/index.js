@@ -22,7 +22,7 @@ module.exports = (tree, opts = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
-  const sort = input => (ctx.sortFn === null ? input : input.sort((a, b) => ctx.sortFn(b, a)));
+  const sort = input => (ctx.sortFn === null ? input.reverse() : input.sort((a, b) => ctx.sortFn(b, a)));
 
   const neighbours = [];
   const keys = sort(Object.keys(tree)).map(k => [k]);
