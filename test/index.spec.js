@@ -18,14 +18,14 @@ describe('Testing Treeify', () => {
         }
       }
     })).to.deep.equal([
-      '├─ page',
-      '│  ├─ world',
-      '│  │  ├─ index.js',
-      '│  │  └─ index.css',
-      '│  └─ hello',
-      '│     └─ index.css',
-      '└─ vendor',
-      '   └─ index.js'
+      '├─ vendor',
+      '│  └─ index.js',
+      '└─ page',
+      '   ├─ hello',
+      '   │  └─ index.css',
+      '   └─ world',
+      '      ├─ index.css',
+      '      └─ index.js'
     ].join('\n'));
   });
 
@@ -50,14 +50,14 @@ describe('Testing Treeify', () => {
       keyNoNeighbour: '\'-- ',
       keyNeighbour: '+-- '
     })).to.deep.equal([
-      '+-- page',
-      '¦   +-- world',
-      '¦   ¦   +-- index.js',
-      "¦   ¦   '-- index.css",
-      "¦   '-- hello",
-      "¦       '-- index.css",
-      "'-- vendor",
-      "    '-- index.js"
+      '+-- vendor',
+      '¦   \'-- index.js',
+      '\'-- page',
+      '    +-- hello',
+      '    ¦   \'-- index.css',
+      '    \'-- world',
+      '        +-- index.css',
+      '        \'-- index.js'
     ]);
   });
 
@@ -74,13 +74,13 @@ describe('Testing Treeify', () => {
         'pink lady': null
       }
     })).to.deep.equal([
-      '├─ apples',
-      '│  ├─ pink lady',
-      '│  └─ gala',
-      '└─ oranges',
-      '   └─ mandarin',
-      '      ├─ tangerine: so cheap and juicy!',
-      '      └─ clementine'
+      '├─ oranges',
+      '│  └─ mandarin',
+      '│     ├─ clementine',
+      '│     └─ tangerine: so cheap and juicy!',
+      '└─ apples',
+      '   ├─ gala',
+      '   └─ pink lady'
     ].join('\n'));
   });
 
