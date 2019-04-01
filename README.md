@@ -65,7 +65,7 @@ treeify({
 
 ### Features
 
-- Output is sorted alphabetically as one would expect
+- Allows for custom sorting
 - Very fast and memory efficient implementation
 - Input traversed exactly once
 - Dependency free and small in size
