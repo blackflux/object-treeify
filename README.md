@@ -36,7 +36,7 @@ the output can be sorted using a custom comparator function.
 
 ## Usage
 
-<!-- eslint-disable import/no-unresolved -->
+<!-- eslint-disable import/no-unresolved,import/no-extraneous-dependencies -->
 ```js
 const treeify = require('object-treeify');
 
