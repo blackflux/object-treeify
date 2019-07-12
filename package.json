@@ -45,7 +45,7 @@
     "@blackflux/robo-config-plugin": "2.0.1",
     "babel-eslint": "10.0.2",
     "chai": "4.2.0",
-    "coveralls": "3.0.4",
+    "coveralls": "3.0.5",
     "eslint": "6.0.1",
     "js-gardener": "2.0.42",
     "nyc": "14.1.1",
