@@ -3581,10 +3581,10 @@ joi-strict@1.0.5:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.5.tgz#f4abad8bfd39281eb987f8ceb36c76d5d8de30c2"
   integrity sha512-ZOU1FTny1MmAlm6vXoD77LFqif23KZQVC9m7euLkYq0QHDj0GHKz/A/IRXzhkk3DPll/Y7A74b1R9M7M4fqzTw==
 
-js-gardener@2.0.67:
-  version "2.0.67"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.67.tgz#81924d45363bebc1581dfc3c6ac9eb916f624764"
-  integrity sha512-RJSTny35PYx0p+QzcF2pr2V4vvxAI3kEsbYjzbXXJv/olFJu7Af/CIPCaUHMaswp35dGgcfkE2X5EKr86fyYzg==
+js-gardener@2.0.68:
+  version "2.0.68"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.68.tgz#9fe2eed3a25924cb8f786c67f2d2a2c9e23b4695"
+  integrity sha512-sJEPuozAM6BkgN4uBV7J76+Ex6LLqSRA3kTutjwUq8BMr7IaMQVKD1N6sWFK7m8LfX/vIq1Ko5Pg5rtFWUe9Uw==
   dependencies:
     "@hapi/joi" "15.1.1"
     chalk "2.4.2"

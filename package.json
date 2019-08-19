@@ -54,7 +54,7 @@
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-mocha": "6.0.0",
-    "js-gardener": "2.0.67",
+    "js-gardener": "2.0.68",
     "nyc": "14.1.1",
     "semantic-release": "15.13.21",
     "eslint-plugin-jasmine": "2.10.1",
