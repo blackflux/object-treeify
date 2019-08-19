@@ -168,17 +168,17 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.0.tgz#11a2643b735a6d3ce14a281d4805c7d701b04866"
-  integrity sha512-xSzpNF3okQtDHuSHeCdABmVnfhLz+rthquA2mb9P2UV8mJPK0m+4hhJex/3HxjKx4P+N1pTHoE5luNNcwHjRMg==
+"@blackflux/eslint-plugin-rules@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.1.tgz#acef9f761e42b7c7f06a367c547e407cb694a7f3"
+  integrity sha512-ofOOJKQ9u+VcjnyXFzTQ0DGezJe4VGgPPhY81yqrvC9HrWloXhu3CP2FG5Wkd0giqhvK0tIKeBQ8TW/bbPg60g==
   dependencies:
     smart-fs "1.9.5"
 
-"@blackflux/robo-config-plugin@2.5.3":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.3.tgz#9c2440b6b4fe697636a4203122d9483c8828cc70"
-  integrity sha512-/K1OABMhoXrvJ5rmQaZk/Mndd1edfy32IeaE37OGgZllgIQuJDkZiCj7QpVZfQlaEbCkK456YwR4vAGQalG7ag==
+"@blackflux/robo-config-plugin@2.5.4":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.5.4.tgz#f4072c7262f3e424721266e5182ed2bdc2b312da"
+  integrity sha512-/V9DIdWzEuoTQk2i11gdm0MNknkEVjOy9amNQhERv6pKJi0R0JXb/7BCHvMDbzSL/mwL3Er9kl9Hov8psoBigQ==
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -3581,10 +3581,10 @@ joi-strict@1.0.5:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.5.tgz#f4abad8bfd39281eb987f8ceb36c76d5d8de30c2"
   integrity sha512-ZOU1FTny1MmAlm6vXoD77LFqif23KZQVC9m7euLkYq0QHDj0GHKz/A/IRXzhkk3DPll/Y7A74b1R9M7M4fqzTw==
 
-js-gardener@2.0.67:
-  version "2.0.67"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.67.tgz#81924d45363bebc1581dfc3c6ac9eb916f624764"
-  integrity sha512-RJSTny35PYx0p+QzcF2pr2V4vvxAI3kEsbYjzbXXJv/olFJu7Af/CIPCaUHMaswp35dGgcfkE2X5EKr86fyYzg==
+js-gardener@2.0.68:
+  version "2.0.68"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.68.tgz#9fe2eed3a25924cb8f786c67f2d2a2c9e23b4695"
+  integrity sha512-sJEPuozAM6BkgN4uBV7J76+Ex6LLqSRA3kTutjwUq8BMr7IaMQVKD1N6sWFK7m8LfX/vIq1Ko5Pg5rtFWUe9Uw==
   dependencies:
     "@hapi/joi" "15.1.1"
     chalk "2.4.2"
