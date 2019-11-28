@@ -121,10 +121,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/register@7.7.0":
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.7.0.tgz#4e23ecf840296ef79c605baaa5c89e1a2426314b"
-  integrity sha512-HV3GJzTvSoyOMWGYn2TAh6uL6g+gqKTgEZ99Q3+X9UURT1VPT/WcU46R61XftIc5rXytcOHZ4Z0doDlsjPomIg==
+"@babel/register@7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.7.4.tgz#45a4956471a9df3b012b747f5781cc084ee8f128"
+  integrity sha512-/fmONZqL6ZMl9KJUYajetCrID6m0xmL4odX7v+Xvoxcv0DdbP/oO0TWIeLUCHqczQ6L6njDMqmqHFy2cp3FFsA==
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.13"
@@ -179,10 +179,10 @@
   dependencies:
     smart-fs "1.11.0"
 
-"@blackflux/robo-config-plugin@2.6.18":
-  version "2.6.18"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-2.6.18.tgz#75d4d78995772ee730a86c0362cf71dc41d8c534"
-  integrity sha512-uHvZJ/YHPuOc0Wip6BrIgrWIHhFGL9PJTGRGNXicotj3ayKNmer1J4S5kcgf9wqNzjEJ6X81RHskJsW67qqS/A==
+"@blackflux/robo-config-plugin@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-3.0.1.tgz#2ef76a88a10fcf16eec2336c74019b50bcf83eed"
+  integrity sha512-iC5/y0P8ucnBxj4Cjg49PLkN1KFdnBcveLoq1rr/76ZLB0skw3yCRqy/51/IphPjgpf1QP5hkYw7zY2cBEq1hg==
 
 "@hapi/address@^2.1.2":
   version "2.1.2"
