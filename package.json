@@ -60,7 +60,7 @@
     "eslint-plugin-mocha": "6.2.2",
     "js-gardener": "2.0.122",
     "nyc": "14.1.1",
-    "semantic-release": "15.13.31"
+    "semantic-release": "15.14.0"
   },
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
