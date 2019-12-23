@@ -172,12 +172,12 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.3.19":
-  version "1.3.19"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.19.tgz#0277a6f89b38106131a34968a2f90542432c9e94"
-  integrity sha512-Db8ympfFqCrlKIw/KAAfl7jXhVdlGtgzmhC3bOdBfW16t51ne2YCK/e66FUR5wq64yGhh3vceHC14zT5EhrVCQ==
+"@blackflux/eslint-plugin-rules@1.3.21":
+  version "1.3.21"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.3.21.tgz#633ede4fbb6c18482a6e8adecc5920562d530e7d"
+  integrity sha512-tUsg+8zD4Yze/Y3dRmCcfbHJ7NkE3/a5D/QxmSUbm3wXFQOcrRfZ08dKr2n7GWo4ubVEAeqo95QWMLaozGD/iQ==
   dependencies:
-    smart-fs "1.11.3"
+    smart-fs "1.11.5"
 
 "@blackflux/robo-config-plugin@3.0.4":
   version "3.0.4"
@@ -5187,6 +5187,11 @@ oauth-sign@~0.9.0:
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
 
+object-align@1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.10.tgz#88acc804a7a8d168f0752263fff1b2503cb660d9"
+  integrity sha512-WiZLaIy3m2zsFk8yFNZCWo66bkdLRbgTBLa4MK0W/wdk6vbYia6+xIZ8QD9j98fvMhRf31QunNQUfILD6wn6HA==
+
 object-align@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/object-align/-/object-align-1.0.9.tgz#f1b1e236cc08606d8e85062ad7eaa4234569110a"
@@ -6641,6 +6646,20 @@ smart-fs@1.11.3:
     xml-js "1.6.11"
     yaml-boost "1.9.18"
 
+smart-fs@1.11.5:
+  version "1.11.5"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.11.5.tgz#01c0f7a073c9937266ae51045870c9878eb1b4b6"
+  integrity sha512-lcBoa8tclM4ySLOR3wZ/IjDptw5AQWRzNuBtTl8QPmxCSsBo6jz/AtepopBYKWCjtMBXOZc/F/ksxPJQP89beA==
+  dependencies:
+    fs-extra "8.1.0"
+    js-yaml "3.13.1"
+    json-stringify-pretty-compact "2.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-align "1.0.10"
+    xml-js "1.6.11"
+    yaml-boost "1.9.19"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -7779,6 +7798,16 @@ yaml-boost@1.9.18:
   version "1.9.18"
   resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.18.tgz#7b7423af4f8641a1048c3dfc7473308b82a7a9f2"
   integrity sha512-/YrAJLcELw85HOPSzgRwV3f7crqz8rL9NqOlCzB+Tzs8SnUPoRTyGvUiVrA34u6Gkb5Yw6NIHd1r9seROLV+kA==
+  dependencies:
+    js-yaml "3.13.1"
+    lodash.get "4.4.2"
+    lodash.mergewith "4.6.2"
+    lodash.set "4.3.2"
+
+yaml-boost@1.9.19:
+  version "1.9.19"
+  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-1.9.19.tgz#cf5b303c2237d4fc340c59213ef378764aa12383"
+  integrity sha512-+RNGBTYyqAEIVJlR+FsZuzLPfYmWXRxFvi5wNV7Z+OCCGoSLLP/m8+FIdroRXIzRkzksq/fQPf7efyjXoM+Pjw==
   dependencies:
     js-yaml "3.13.1"
     lodash.get "4.4.2"
