@@ -1,7 +1,6 @@
 const expect = require('chai').expect;
 const treeify = require('../src/index');
 
-
 describe('Testing Treeify', () => {
   it('Testing Comprehensive Null Example', () => {
     expect(treeify({
