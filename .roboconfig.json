@@ -8,6 +8,7 @@
       "packageName": "object-treeify",
       "projectName": "object-treeify",
       "owner": "simlu",
+      "nodeVersion": "10",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux"
     }
