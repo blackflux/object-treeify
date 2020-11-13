@@ -61,7 +61,7 @@
     "js-gardener": "2.0.179",
     "nyc": "15.1.0",
     "semantic-release": "17.2.2",
-    "babel-preset-latest-node": "5.0.0"
+    "babel-preset-latest-node": "5.1.0"
   },
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
