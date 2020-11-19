@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const buildCtx = (opts) => {
+const buildCtx = (opts: Object) => {
   const ctx = {
     joined: true,
     spacerNoNeighbour: '   ',
@@ -19,17 +19,19 @@ const buildCtx = (opts) => {
   return ctx;
 };
 
-module.exports = (tree, opts = {}) => {
+export default (tree: Object, opts: Object = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
-  const sort = (input) => (ctx.sortFn === null ? input.reverse() : input.sort((a, b) => ctx.sortFn(b, a)));
+  const sort = (input: Array<string>) => (ctx.sortFn === null
+    ? input.reverse()
+    : input.sort((a, b) => ctx.sortFn(b, a)));
 
   const neighbours = [];
   const keys = sort(Object.keys(tree)).map((k) => [k]);
-  const lookup = [tree];
+  const lookup : Array<any> = [tree];
   while (keys.length !== 0) {
-    const key = keys.pop();
+    const key: Array<string> = keys.pop();
     const node = lookup[key.length - 1][key[key.length - 1]];
 
     neighbours[key.length - 1] = keys.length !== 0 && keys[keys.length - 1].length === key.length;

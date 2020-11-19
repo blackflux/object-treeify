@@ -1,5 +1,6 @@
+import treeify from '../src/index';
+
 const expect = require('chai').expect;
-const treeify = require('../src/index');
 
 describe('Testing Treeify', () => {
   it('Testing Comprehensive Null Example', () => {
@@ -99,7 +100,7 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      sortFn: (a, b) => Number(b) - Number(a)
+      sortFn: (a: string, b: string) => Number(b) - Number(a)
     })).to.deep.equal([
       '├─ 7',
       '│  ├─ 9',

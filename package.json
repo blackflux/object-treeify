@@ -5,9 +5,11 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc",
+    "build:js": "npx babel src --out-dir lib --copy-files --include-dotfiles --config-file ./.babelrc --extensions '.ts,.tsx'",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "npm run build:types && npm run build:js",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "nyc mocha \"./test/**/*.spec.js\"",
+    "test-simple": "nyc mocha \"./test/**/*.spec.{js,ts}\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "coveralls": "node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "semantic-release": "yarn run build-clean && npx semantic-release",
@@ -44,24 +46,30 @@
   },
   "homepage": "https://github.com/blackflux/object-treeify#readme",
   "devDependencies": {
-    "@babel/cli": "7.12.1",
-    "@babel/core": "7.12.3",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
     "@babel/register": "7.12.1",
-    "@blackflux/eslint-plugin-rules": "1.3.41",
-    "@blackflux/robo-config-plugin": "3.10.14",
+    "@blackflux/eslint-plugin-rules": "1.3.40",
+    "@blackflux/robo-config-plugin": "3.10.9",
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.0.3",
     "babel-eslint": "10.1.0",
+    "babel-preset-latest-node": "5.0.0",
     "chai": "4.2.0",
     "coveralls": "3.1.0",
-    "eslint": "7.13.0",
-    "eslint-config-airbnb-base": "14.2.1",
+    "eslint": "7.11.0",
+    "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-json": "2.1.2",
     "eslint-plugin-markdown": "1.0.2",
     "eslint-plugin-mocha": "8.0.0",
-    "js-gardener": "2.0.179",
+    "js-gardener": "2.0.177",
     "nyc": "15.1.0",
-    "semantic-release": "17.2.3",
-    "babel-preset-latest-node": "5.1.1"
+    "semantic-release": "17.2.1",
+    "ts-node": "9.0.0",
+    "typescript": "^4.0.3"
   },
   "nyc": {
     "tempDir": "./coverage/.nyc_output",
@@ -73,18 +81,21 @@
     "functions": 100,
     "branches": 100,
     "include": [
-      "**/*.js"
+      "**/*.js",
+      "**/*.ts"
     ],
     "reporter": [
       "lcov",
       "text-summary"
     ],
     "require": [
-      "@babel/register"
+      "ts-node/register"
     ],
-    "extension": [],
+    "extension": [
+      ".js",
+      ".ts"
+    ],
     "cache": true,
-    "all": true,
     "babel": true,
     "exclude": [
       "gardener.js",

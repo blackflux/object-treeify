@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "esnext"
+    ],
+    "outDir": "./lib",
+    "target": "esnext",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node"
+  },
+  "include": [
+    "./src/*"
+  ]
+}
