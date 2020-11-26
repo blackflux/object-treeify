@@ -1,4 +1,5 @@
-const assert = require('assert');
+// eslint-disable-next-line no-console
+const assert = console.assert;
 
 const buildCtx = (opts) => {
   const ctx = {
@@ -10,12 +11,13 @@ const buildCtx = (opts) => {
     sortFn: null,
     ...opts
   };
-  assert(typeof ctx.joined === 'boolean');
-  assert(typeof ctx.spacerNoNeighbour === 'string');
-  assert(typeof ctx.spacerNeighbour === 'string');
-  assert(typeof ctx.keyNoNeighbour === 'string');
-  assert(typeof ctx.keyNeighbour === 'string');
-  assert(typeof ctx.sortFn === 'function' || ctx.sortFn === null);
+  assert(Object.keys(ctx).length === 6, 'Unexpected Option(s) provided');
+  assert(typeof ctx.joined === 'boolean', 'Option "joined" has invalid format');
+  assert(typeof ctx.spacerNoNeighbour === 'string', 'Option "spacerNoNeighbour" has invalid format');
+  assert(typeof ctx.spacerNeighbour === 'string', 'Option "spacerNeighbour" has invalid format');
+  assert(typeof ctx.keyNoNeighbour === 'string', 'Option "keyNoNeighbour" has invalid format');
+  assert(typeof ctx.keyNeighbour === 'string', 'Option "keyNeighbour" has invalid format');
+  assert(typeof ctx.sortFn === 'function' || ctx.sortFn === null, 'Option "sortFn" has invalid format');
   return ctx;
 };
 
