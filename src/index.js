@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-console
-const assert = console.assert;
+import assert from './assert.js';
 
 const buildCtx = (opts) => {
   const ctx = {
@@ -21,7 +20,7 @@ const buildCtx = (opts) => {
   return ctx;
 };
 
-module.exports = (tree, opts = {}) => {
+export default (tree, opts = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
