@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const treeify = require('../src/index');
+import { expect } from 'chai';
+import treeify from '../src/index.js';
 
 describe('Testing Treeify', () => {
   it('Testing Comprehensive Null Example', () => {
