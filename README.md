@@ -70,6 +70,7 @@ treeify({
 - Input traversed exactly once
 - Dependency free and small in size
 - Tests to verify correctness
+- Handles circular references
 
 ## Options
 
@@ -114,6 +115,13 @@ Type: `function`<br>
 Default: `null`
 
 Function that defines the key sort order. Defaults to ordering of `Object.keys(...)`, which is typically insertion order.
+
+#### breakCircularWith
+
+Type: `string` or `null`<br>
+Default: `&nbsp;(circular ref.)`
+
+When `string`, circular references are broken with that string, at a minor performance cost.
 
 ## Examples
 
