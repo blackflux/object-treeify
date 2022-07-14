@@ -1,3 +1,5 @@
+import treeifySlow from 'treeify';
+
 const expect = require('chai').expect;
 const treeify = require('../src/index');
 
@@ -99,7 +101,8 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      sortFn: (a, b) => Number(b) - Number(a)
+      sortFn: (a, b) => Number(b) - Number(a),
+      breakCircularWith: null
     })).to.deep.equal([
       '├─ 7',
       '│  ├─ 9',
@@ -111,5 +114,13 @@ describe('Testing Treeify', () => {
       '   └─ 2',
       '      └─ 3'
     ].join('\n'));
+  });
+
+  it('Testing Circular Reference', () => {
+    const x = { a: null, b: {} };
+    x.b.c = x;
+    const r1 = treeifySlow.asTree(x).trim();
+    const r2 = treeify(x);
+    expect(r1).to.equal(r2);
   });
 });
