@@ -119,7 +119,7 @@ Function that defines the key sort order. Defaults to ordering of `Object.keys(.
 #### breakCircularWith
 
 Type: `string` or `null`<br>
-Default: `&nbsp;(circular ref.)`
+Default: ` (circular ref.)`
 
 When `string`, circular references are broken with that string, at a minor performance cost.
 
