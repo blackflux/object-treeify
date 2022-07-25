@@ -126,7 +126,7 @@ When `string`, circular references are broken with that string, at a minor perfo
 #### renderFn
 
 Type: `function`<br>
-Default: `(node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '')`
+Default: ``(node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '')``
 
 Can be used to overwrite the node rendering logic.
 
