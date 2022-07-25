@@ -109,6 +109,13 @@ Default: `├─ `
 
 Prefix for key when a further neighbour is present.
 
+#### renderFn
+
+Type: `function`<br>
+Default: ``(node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '')``
+
+Can be used to overwrite the node rendering logic.
+
 #### sortFn
 
 Type: `function`<br>
@@ -122,13 +129,6 @@ Type: `string` or `null`<br>
 Default: ` (circular ref.)`
 
 When `string`, circular references are broken with that string, at a minor performance cost.
-
-#### renderFn
-
-Type: `function`<br>
-Default: `(node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '')`
-
-Can be used to overwrite the node rendering logic.
 
 ## Examples
 
