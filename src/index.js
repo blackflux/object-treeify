@@ -7,7 +7,7 @@ const buildCtx = (opts) => {
     spacerNeighbour: '│  ',
     keyNoNeighbour: '└─ ',
     keyNeighbour: '├─ ',
-    nodeSeparator: ': ',
+    separator: ': ',
     renderFn: (node) => (['boolean', 'string', 'number'].includes(typeof node) ? node : undefined),
     sortFn: null,
     breakCircularWith: ' (circular ref.)',
@@ -19,7 +19,7 @@ const buildCtx = (opts) => {
   assert(typeof ctx.spacerNeighbour === 'string', 'Option "spacerNeighbour" has invalid format');
   assert(typeof ctx.keyNoNeighbour === 'string', 'Option "keyNoNeighbour" has invalid format');
   assert(typeof ctx.keyNeighbour === 'string', 'Option "keyNeighbour" has invalid format');
-  assert(typeof ctx.nodeSeparator === 'string', 'Option "nodeSeparator" has invalid format');
+  assert(typeof ctx.separator === 'string', 'Option "separator" has invalid format');
   assert(typeof ctx.renderFn === 'function', 'Option "renderFn" has invalid format');
   assert(typeof ctx.sortFn === 'function' || ctx.sortFn === null, 'Option "sortFn" has invalid format');
   assert(
@@ -54,7 +54,7 @@ export default (tree, opts = {}) => {
       neighbours.slice(0, key.length - 1).map((n) => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join(''),
       neighbours[key.length - 1] ? ctx.keyNeighbour : ctx.keyNoNeighbour,
       key[key.length - 1],
-      nodeRendered === undefined ? '' : `${ctx.nodeSeparator}${node}`,
+      nodeRendered === undefined ? '' : `${ctx.separator}${node}`,
       isCircular ? ctx.breakCircularWith : ''
     ].join(''));
 

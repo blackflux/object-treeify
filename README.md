@@ -109,7 +109,7 @@ Default: `├─ `
 
 Prefix for key when a further neighbour is present.
 
-#### nodeSeparator
+#### separator
 
 Type: `string`<br>
 Default: `: `
