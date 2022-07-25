@@ -23,7 +23,7 @@ const buildCtx = (opts) => {
     typeof ctx.breakCircularWith === 'string' || ctx.breakCircularWith === null,
     'Option "breakCircularWith" has invalid format'
   );
-  assert(typeof ctx.renderFn === 'function', 'Option "render" has invalid format');
+  assert(typeof ctx.renderFn === 'function', 'Option "renderFn" has invalid format');
   return ctx;
 };
 
