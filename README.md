@@ -84,37 +84,44 @@ By default a single string is returned. Can be set to `false` to instead return 
 #### spacerNoNeighbour
 
 Type: `string`<br>
-Default: `   `
+Default: `   `
 
 Prefix for depth level when no further neighbour is present.
 
 #### spacerNeighbour
 
 Type: `string`<br>
-Default: `│  `
+Default: `│  `
 
 Prefix for depth level when a further neighbour is present.
 
 #### keyNoNeighbour
 
 Type: `string`<br>
-Default: `└─ `
+Default: `└─ `
 
 Prefix for key when no further neighbour is present.
 
 #### keyNeighbour
 
 Type: `string`<br>
-Default: `├─ `
+Default: `├─ `
 
 Prefix for key when a further neighbour is present.
+
+#### separator
+
+Type: `string`<br>
+Default: `: `
+
+Used to separate node key from node value.
 
 #### renderFn
 
 Type: `function`<br>
-Default: ``(node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '')``
+Default: `(node) => (['boolean', 'string', 'number'].includes(typeof node) ? node : undefined)`
 
-Can be used to overwrite the node rendering logic.
+Can be used to overwrite the node rendering logic. Node is rendered if result is not equal `undefined`.
 
 #### sortFn
 
