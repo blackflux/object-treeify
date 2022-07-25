@@ -7,9 +7,9 @@ const buildCtx = (opts) => {
     spacerNeighbour: '│  ',
     keyNoNeighbour: '└─ ',
     keyNeighbour: '├─ ',
+    renderFn: (node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : ''),
     sortFn: null,
     breakCircularWith: ' (circular ref.)',
-    renderFn: (node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : ''),
     ...opts
   };
   assert(Object.keys(ctx).length === 8, 'Unexpected Option(s) provided');
@@ -18,12 +18,12 @@ const buildCtx = (opts) => {
   assert(typeof ctx.spacerNeighbour === 'string', 'Option "spacerNeighbour" has invalid format');
   assert(typeof ctx.keyNoNeighbour === 'string', 'Option "keyNoNeighbour" has invalid format');
   assert(typeof ctx.keyNeighbour === 'string', 'Option "keyNeighbour" has invalid format');
+  assert(typeof ctx.renderFn === 'function', 'Option "renderFn" has invalid format');
   assert(typeof ctx.sortFn === 'function' || ctx.sortFn === null, 'Option "sortFn" has invalid format');
   assert(
     typeof ctx.breakCircularWith === 'string' || ctx.breakCircularWith === null,
     'Option "breakCircularWith" has invalid format'
   );
-  assert(typeof ctx.renderFn === 'function', 'Option "renderFn" has invalid format');
   return ctx;
 };
 
