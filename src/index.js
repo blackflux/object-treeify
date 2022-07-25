@@ -9,9 +9,10 @@ const buildCtx = (opts) => {
     keyNeighbour: '├─ ',
     sortFn: null,
     breakCircularWith: ' (circular ref.)',
+    renderFn: (node) => (['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : ''),
     ...opts
   };
-  assert(Object.keys(ctx).length === 7, 'Unexpected Option(s) provided');
+  assert(Object.keys(ctx).length === 8, 'Unexpected Option(s) provided');
   assert(typeof ctx.joined === 'boolean', 'Option "joined" has invalid format');
   assert(typeof ctx.spacerNoNeighbour === 'string', 'Option "spacerNoNeighbour" has invalid format');
   assert(typeof ctx.spacerNeighbour === 'string', 'Option "spacerNeighbour" has invalid format');
@@ -22,6 +23,7 @@ const buildCtx = (opts) => {
     typeof ctx.breakCircularWith === 'string' || ctx.breakCircularWith === null,
     'Option "breakCircularWith" has invalid format'
   );
+  assert(typeof ctx.renderFn === 'function', 'Option "render" has invalid format');
   return ctx;
 };
 
@@ -44,7 +46,7 @@ export default (tree, opts = {}) => {
       neighbours.slice(0, key.length - 1).map((n) => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join(''),
       neighbours[key.length - 1] ? ctx.keyNeighbour : ctx.keyNoNeighbour,
       key[key.length - 1],
-      ['boolean', 'string', 'number'].includes(typeof node) ? `: ${node}` : '',
+      ctx.renderFn(node),
       isCircular ? ctx.breakCircularWith : ''
     ].join(''));
 
