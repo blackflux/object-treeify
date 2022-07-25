@@ -139,8 +139,9 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      renderFn: (node) => `: ${node}`
+      renderFn: (node) => node
     })).to.deep.equal([
+      '[object Object]',
       '├─ 1: [object Object]',
       '│  ├─ 2: [object Object]',
       '│  │  └─ 3: null',
