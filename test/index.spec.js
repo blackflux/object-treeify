@@ -122,4 +122,34 @@ describe('Testing Treeify', () => {
     const r2 = treeify(x);
     expect(r1).to.equal(r2);
   });
+
+  it('Testing renderFn', () => {
+    expect(treeify({
+      1: {
+        2: {
+          3: null
+        },
+        4: {
+          5: null,
+          6: null
+        }
+      },
+      7: {
+        8: null,
+        9: null
+      }
+    }, {
+      renderFn: (node) => `: ${node}`
+    })).to.deep.equal([
+      '├─ 1: [object Object]',
+      '│  ├─ 2: [object Object]',
+      '│  │  └─ 3: null',
+      '│  └─ 4: [object Object]',
+      '│     ├─ 5: null',
+      '│     └─ 6: null',
+      '└─ 7: [object Object]',
+      '   ├─ 8: null',
+      '   └─ 9: null'
+    ].join('\n'));
+  });
 });
