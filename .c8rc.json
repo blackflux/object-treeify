@@ -15,7 +15,8 @@
   "functions": 100,
   "branches": 100,
   "include": [
-    "**/*.js"
+    "**/*.js",
+    "**/*.ts"
   ],
   "reporter": [
     "lcov",

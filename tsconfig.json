@@ -1,0 +1,34 @@
+{
+//  "extends": "@tsconfig/node14/tsconfig.json",
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "lib": ["es6", "es2020"],
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "declaration": true,
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./lib",
+
+    // Type Checking
+    // https://www.typescriptlang.org/tsconfig#Type_Checking_6248
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    // All checks that are not part of "strict"
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}

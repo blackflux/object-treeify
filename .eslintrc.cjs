@@ -1,7 +1,8 @@
-{
+module.exports = {
   "root": true,
   "extends": [
     "airbnb-base",
+    "airbnb-typescript/base",
     "plugin:mocha/recommended",
     "plugin:markdown/recommended"
   ],
@@ -12,6 +13,7 @@
     "mocha/no-exclusive-tests": "error",
     "prefer-destructuring": ["error", {"object": false, "array": false}],
     "comma-dangle": ["error", "never"],
+    "@typescript-eslint/comma-dangle": ["error", "never"],
     "indent": ["error", 2, {"SwitchCase": 1}],
     "quotes": [2, "single", {"avoidEscape": true}],
     "linebreak-style": [2, "unix"],
@@ -43,7 +45,17 @@
   },
   "env": {"es6": true, "node": true, "mocha": true},
   "globals": {},
-  "plugins": ["json", "mocha", "@blackflux/rules"],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {"requireConfigFile": false}
-}
+  "plugins": ['@typescript-eslint', "json", "markdown", "mocha", "@blackflux/rules"],
+  "parser": "@typescript-eslint/parser",
+  parserOptions: {
+    sourceType: "module",
+    project: './tsconfig.eslint.json',
+    extraFileExtensions: ['.json', '.md']
+  },
+  overrides: [
+    {
+      files: ["**/*.md"],
+      processor: "markdown/markdown"
+    }
+  ]
+};

@@ -1,1 +1,4 @@
 timeout: 2000
+node-option:
+  - experimental-specifier-resolution=node
+  - loader=ts-node/esm

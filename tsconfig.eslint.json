@@ -1,0 +1,17 @@
+{
+  "compilerOptions": { "strict": true },
+  "extends": "./tsconfig.json",
+  "include": [
+    "test/**/*",
+    ".gally.json",
+    ".c8rc.json",
+    ".eslintrc.json",
+    ".releaserc.json",
+    ".roboconfig.json",
+    "tsconfig.json",
+    "tsconfig.eslint.json",
+    "README.md/0_0.js",
+    "gardener.js",
+    "package.json"
+  ]
+}
