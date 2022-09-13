@@ -2513,10 +2513,10 @@ joi@17.4.2:
     "@sideway/formula" "^3.0.0"
     "@sideway/pinpoint" "^2.0.0"
 
-js-gardener@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-4.0.1.tgz#e7d3247c2b7525f1debeedf11346c6324b833862"
-  integrity sha512-7FbJUpQ4smYo7GF3glykKO2n+4kjiFneLtOtpYYB7+VRw3UTo2xMej/DO+9Xu5Wj6bJh0AI1FVY5eIEaTQeiYA==
+js-gardener@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-4.0.2.tgz#f59a8bc1fad74a5d04fcb89b7c08b49f3245746a"
+  integrity sha512-ZtIrK+F6vCvz9NdQ4JP/EgT7GYdKsI7xDEx5L9sMuk7MeZxV1qk1D20ECEQUKHqjD6UARtItcwUNSbYK6Kqthw==
   dependencies:
     chalk "5.0.1"
     fancy-log "2.0.0"
@@ -2526,6 +2526,7 @@ js-gardener@4.0.1:
     lodash.difference "4.5.0"
     mocha "10.0.0"
     npm-check "6.0.1"
+    plugin-name-to-package-name "0.1.1"
     robo-config "4.0.5"
     smart-fs "3.0.1"
 
@@ -3359,6 +3360,11 @@ please-upgrade-node@^3.2.0:
   integrity sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==
   dependencies:
     semver-compare "^1.0.0"
+
+plugin-name-to-package-name@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/plugin-name-to-package-name/-/plugin-name-to-package-name-0.1.1.tgz#14ec03fc42a88b1aa5edb9c1132589bddfc35f57"
+  integrity sha512-TrfIKmAQzAvATMavKb+I5kNv24jmPBrQ71VPGc7RC8/n5FtRXr0ZRZ1GxVfcJw06/VSM/zAGyI5CKcxWMSwT6A==
 
 postcss@^8.1.10:
   version "8.4.16"

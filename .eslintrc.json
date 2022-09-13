@@ -1,4 +1,4 @@
-module.exports = {
+{
   "root": true,
   "extends": [
     "airbnb-base",
@@ -45,17 +45,17 @@ module.exports = {
   },
   "env": {"es6": true, "node": true, "mocha": true},
   "globals": {},
-  "plugins": ['@typescript-eslint', "json", "markdown", "mocha", "@blackflux/rules"],
+  "plugins": ["@typescript-eslint", "json", "markdown", "mocha", "@blackflux/rules"],
   "parser": "@typescript-eslint/parser",
-  parserOptions: {
-    sourceType: "module",
-    project: './tsconfig.eslint.json',
-    extraFileExtensions: ['.json', '.md']
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.eslint.json",
+    "extraFileExtensions": [".json", ".md"]
   },
-  overrides: [
+  "overrides": [
     {
-      files: ["**/*.md"],
-      processor: "markdown/markdown"
+      "files": ["**/*.md"],
+      "processor": "markdown/markdown"
     }
   ]
-};
+}
