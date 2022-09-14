@@ -14,15 +14,17 @@ import { describe } from 'node-tdd';
 
 const globSync = glob.sync;
 
-describe('Testing eslint', { timeout: 10000 }, () => {
+describe('Testing eslint', { timeout: 60000 }, () => {
   it('Linting files', async () => {
     // @ts-ignore
     const dir = path.join(fs.dirname(import.meta.url), '..');
+    const tsConfigFilePath = path.join(dir, 'tsconfig.eslint.json');
+    const tsConfig = fs.smartRead(tsConfigFilePath);
     const files = globSync(
       '**/*.{ts,tsx,js,cjs,mjs,md,yaml,yml,json}',
       {
         cwd: dir,
-        ignore: fs.smartRead(path.join(dir, 'tsconfig.eslint.json')).exclude,
+        ignore: tsConfig.exclude,
         dot: true
       }
     );
@@ -37,7 +39,6 @@ describe('Testing eslint', { timeout: 10000 }, () => {
       fix: false,
       plugins,
       baseConfig: {},
-      // we use glob on passed in files, due to https://github.com/eslint/eslint/issues/5623
       ignore: false,
       reportUnusedDisableDirectives: 'error'
     });
@@ -52,6 +53,9 @@ describe('Testing eslint', { timeout: 10000 }, () => {
       (e: { warningCount: number, errorCount: number }) => e.warningCount === 0 && e.errorCount === 0
     );
     expect(result, 'Linter Problem').to.equal(true);
-    expect(fs.smartWrite(path.join(dir, '.eslint/linted.txt'), files)).to.equal(false);
+    expect(fs.smartWrite(tsConfigFilePath, {
+      ...tsConfig,
+      include: files
+    })).to.equal(false);
   });
 });

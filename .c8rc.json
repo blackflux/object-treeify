@@ -16,7 +16,10 @@
   "branches": 100,
   "include": [
     "**/*.js",
-    "**/*.ts"
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "reporter": [
     "lcov",
