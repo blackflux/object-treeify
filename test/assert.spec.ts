@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import assert from '../src/assert';
+import assert from '../src/assert.js';
 
 describe('Testing assert.js', () => {
   it('Testing throw', () => {

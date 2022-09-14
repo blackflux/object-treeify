@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 // @ts-ignore
 import treeifySlow from 'treeify';
-import treeify from '../src/index';
+import treeify from '../src/index.js';
 
 describe('Testing Treeify', () => {
   it('Testing Comprehensive Null Example', () => {

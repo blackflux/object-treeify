@@ -10,8 +10,15 @@
     ".roboconfig.json",
     "tsconfig.json",
     "tsconfig.eslint.json",
-    "README.md/0_0.js",
+    "README.md",
     "gardener.js",
-    "package.json"
+    "package.json",
+    ".circleci/config.yml",
+    ".dependabot/config.yml",
+    ".mocharc.yml"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "coverage/**"
   ]
 }
