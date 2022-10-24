@@ -1,6 +1,16 @@
 import assert from './assert.js';
 
-const buildCtx = (opts) => {
+const buildCtx = (opts : {
+  joined?: boolean,
+  spacerNoNeighbour?: string,
+  spacerNeighbour?: string,
+  keyNoNeighbour?: string,
+  keyNeighbour?: string,
+  separator?: string,
+  renderFn?: Function,
+  sortFn?: Function | null,
+  breakCircularWith?: string | null,
+}) => {
   const ctx = {
     joined: true,
     spacerNoNeighbour: '   ',
@@ -8,7 +18,7 @@ const buildCtx = (opts) => {
     keyNoNeighbour: '└─ ',
     keyNeighbour: '├─ ',
     separator: ': ',
-    renderFn: (node) => (['boolean', 'string', 'number'].includes(typeof node) ? node : undefined),
+    renderFn: (node: any) => (['boolean', 'string', 'number'].includes(typeof node) ? node : undefined),
     sortFn: null,
     breakCircularWith: ' (circular ref.)',
     ...opts
@@ -29,7 +39,7 @@ const buildCtx = (opts) => {
   return ctx;
 };
 
-export default (tree, opts = {}) => {
+export default (tree: { [key: string]: any }, opts = {}) => {
   const ctx = buildCtx(opts);
   const result = [];
 
@@ -38,17 +48,19 @@ export default (tree, opts = {}) => {
     result.push(String(rootRendered));
   }
 
-  const sort = (input) => (ctx.sortFn === null ? input.reverse() : input.sort((a, b) => ctx.sortFn(b, a)));
+  const sort = (input: Array<any>) => (
+    ctx.sortFn === null ? input.reverse() : input.sort((a: any, b: any) => ctx.sortFn!(b, a))
+  );
 
   const neighbours = [];
   const keys = sort(Object.keys(tree)).map((k) => [k]);
   const lookup = [tree];
   while (keys.length !== 0) {
-    const key = keys.pop();
-    const node = lookup[key.length - 1][key[key.length - 1]];
+    const key = keys.pop()!;
+    const node = lookup[key.length - 1]![key[key.length - 1]];
     const isCircular = ctx.breakCircularWith !== null && lookup.includes(node);
 
-    neighbours[key.length - 1] = keys.length !== 0 && keys[keys.length - 1].length === key.length;
+    neighbours[key.length - 1] = keys.length !== 0 && keys[keys.length - 1]!.length === key.length;
     const nodeRendered = ctx.renderFn(node);
     result.push([
       neighbours.slice(0, key.length - 1).map((n) => (n ? ctx.spacerNeighbour : ctx.spacerNoNeighbour)).join(''),

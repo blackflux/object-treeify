@@ -1,49 +1,75 @@
 {
   "root": true,
-  "extends": [
-    "airbnb-base",
-    "plugin:mocha/recommended",
-    "plugin:markdown/recommended"
-  ],
-  "rules": {
-    "@blackflux/rules/c8-prevent-ignore": 1,
-    "@blackflux/rules/kebab-case-enforce": 1,
-    "max-len": ["error", {"code": 120}],
-    "mocha/no-exclusive-tests": "error",
-    "prefer-destructuring": ["error", {"object": false, "array": false}],
-    "comma-dangle": ["error", "never"],
-    "indent": ["error", 2, {"SwitchCase": 1}],
-    "quotes": [2, "single", {"avoidEscape": true}],
-    "linebreak-style": [2, "unix"],
-    "semi": [2, "always"],
-    "no-unused-vars": [
-      1,
-      {"vars": "all", "args": "none", "ignoreRestSiblings": true}
-    ],
-    "no-var": [1],
-    "no-fallthrough": [1],
-    "spaced-comment": [
-      "error",
-      "always",
-      {
-        "line": {"exceptions": ["-", "+"], "markers": ["=", "!"]},
-        "block": {
-          "exceptions": ["-", "+"],
-          "markers": ["=", "!", ":", "::"],
-          "balanced": true
-        }
-      }
-    ],
-    "@blackflux/rules/prevent-typeof-object": 1,
-    "mocha/no-mocha-arrows": 0,
-    "mocha/no-hooks-for-single-case": 0,
-    "import/no-useless-path-segments": [2, {"commonjs": true}],
-    "import/extensions": [2, "always"],
-    "import/prefer-default-export": 0
-  },
   "env": {"es6": true, "node": true, "mocha": true},
   "globals": {},
-  "plugins": ["json", "mocha", "@blackflux/rules"],
   "parser": "@babel/eslint-parser",
-  "parserOptions": {"requireConfigFile": false}
+  "parserOptions": {"requireConfigFile": false},
+  "overrides": [
+    {
+      "files": ["*.js", "*.cjs", "*.mjs"],
+      "extends": ["airbnb-base", "plugin:mocha/recommended", "plugin:markdown/recommended"],
+      "plugins": ["mocha", "@blackflux/rules"]
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["airbnb-base", "plugin:mocha/recommended", "plugin:markdown/recommended", "airbnb-typescript/base"],
+      "plugins": ["mocha", "@blackflux/rules", "@typescript-eslint"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {"project": "./tsconfig.eslint.json"}
+    },
+    {
+      "files": ["*.js", "*.cjs", "*.mjs", "*.ts", "*.tsx"],
+      "rules": {
+        "@blackflux/rules/c8-prevent-ignore": 1,
+        "@blackflux/rules/kebab-case-enforce": 1,
+        "max-len": ["error", {"code": 120}],
+        "mocha/no-exclusive-tests": "error",
+        "prefer-destructuring": ["error", {"object": false, "array": false}],
+        "comma-dangle": ["error", "never"],
+        "@typescript-eslint/comma-dangle": ["error", "never"],
+        "indent": ["error", 2, {"SwitchCase": 1}],
+        "quotes": [2, "single", {"avoidEscape": true}],
+        "linebreak-style": [2, "unix"],
+        "semi": [2, "always"],
+        "no-unused-vars": [
+          1,
+          {"vars": "all", "args": "none", "ignoreRestSiblings": true}
+        ],
+        "no-var": [1],
+        "no-fallthrough": [1],
+        "spaced-comment": [
+          "error",
+          "always",
+          {
+            "line": {"exceptions": ["-", "+"], "markers": ["=", "!"]},
+            "block": {
+              "exceptions": ["-", "+"],
+              "markers": ["=", "!", ":", "::"],
+              "balanced": true
+            }
+          }
+        ],
+        "@blackflux/rules/prevent-typeof-object": 1,
+        "mocha/no-mocha-arrows": 0,
+        "mocha/no-hooks-for-single-case": 0,
+        "import/no-useless-path-segments": [2, {"commonjs": true}],
+        "import/extensions": [2, "always"],
+        "import/prefer-default-export": 0
+      }
+    },
+    {
+      "files": ["*.md"],
+      "plugins": ["markdown"],
+      "processor": "markdown/markdown"
+    },
+    {
+      "files": ["*.yaml", "*.yml"],
+      "plugins": ["yaml"],
+      "extends": ["plugin:yaml/recommended"]
+    },
+    {
+      "files": ["*.json"],
+      "plugins": ["json"]
+    }
+  ]
 }

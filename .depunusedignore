@@ -1,1 +1,4 @@
 @blackflux/robo-config-plugin
+@tsconfig/node14
+ts-loader
+ts-node

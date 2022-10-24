@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+// @ts-ignore
 import treeifySlow from 'treeify';
 import treeify from '../src/index.js';
 
@@ -100,7 +101,7 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      sortFn: (a, b) => Number(b) - Number(a),
+      sortFn: (a: string, b: string) => Number(b) - Number(a),
       breakCircularWith: null
     })).to.deep.equal([
       '├─ 7',
@@ -116,7 +117,7 @@ describe('Testing Treeify', () => {
   });
 
   it('Testing Circular Reference', () => {
-    const x = { a: null, b: {} };
+    const x = { a: null, b: { c: {} } };
     x.b.c = x;
     const r1 = treeifySlow.asTree(x).trim();
     const r2 = treeify(x);
@@ -139,7 +140,7 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      renderFn: (node) => node
+      renderFn: (node: any) => node
     })).to.deep.equal([
       '[object Object]',
       '├─ 1: [object Object]',

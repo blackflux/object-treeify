@@ -1,0 +1,30 @@
+{
+  "compilerOptions": { "strict": true },
+  "extends": "./tsconfig.json",
+  "include": [
+    ".c8rc.json",
+    ".circleci/config.yml",
+    ".dependabot/config.yml",
+    ".eslintrc.json",
+    ".gally.json",
+    ".mocharc.yml",
+    ".releaserc.json",
+    ".roboconfig.json",
+    "CONFDOCS.md",
+    "gardener.js",
+    "package.json",
+    "README.md",
+    "src/assert.ts",
+    "src/index.ts",
+    "test/assert.spec.ts",
+    "test/eslint.spec.ts",
+    "test/hot.js",
+    "test/index.spec.ts",
+    "tsconfig.eslint.json",
+    "tsconfig.json"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "coverage/**"
+  ]
+}
