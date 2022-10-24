@@ -8,7 +8,7 @@
     "clean": "rm -rf lib",
     "build": "cp -rf ./src ./lib && ncc build -m -o lib && mv lib/index.js lib/index.min.js && cp src/index.js lib/index.js && rm lib/package.json",
     "build-clean": "yarn run clean && yarn run build",
-    "test-simple": "c8 mocha --experimental-loader=./test/hot.js \"./test/**/*.spec.js\"",
+    "test-simple": "c8 mocha \"./test/**/*.spec.js\"",
     "test": "yarn run clean && yarn run gardener && yarn run test-simple",
     "semantic-release": "yarn run build-clean && npx semantic-release",
     "gardener": "node gardener.js",
