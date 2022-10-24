@@ -29,6 +29,17 @@ describe('Testing Treeify', () => {
     ].join('\n'));
   });
 
+  it('Testing Circular reference', () => {
+    const obj = {};
+    obj.circular = obj
+    expect(treeify({
+      obj,
+    })).to.deep.equal([
+      '└─ obj',
+      '   └─ circular (circular ref.)',
+    ].join('\n'));
+  });
+
   it('Testing Not Joined Custom', () => {
     expect(treeify({
       vendor: {
