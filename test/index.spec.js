@@ -95,6 +95,23 @@ describe('Testing Treeify', () => {
     ].join('\n'));
   });
 
+  it('Testing Multiline Example', () => {
+    expect(treeify({
+      oranges: {
+        mandarin: {
+          clementine: "1\n2\n  3",
+        }
+      },
+    })).to.deep.equal([
+      '└─ oranges',
+      '   └─ mandarin',
+      '      └─ clementine: |',
+      '           1',
+      '           2',
+      '             3',
+    ].join('\n'));
+  });
+
   it('Testing Custom Sort Order', () => {
     expect(treeify({
       1: {
@@ -150,16 +167,15 @@ describe('Testing Treeify', () => {
         9: null
       }
     }, {
-      renderFn: (node) => node
+      renderFn: (node) => `${node}`
     })).to.deep.equal([
-      '[object Object]',
-      '├─ 1: [object Object]',
-      '│  ├─ 2: [object Object]',
+      '├─ 1',
+      '│  ├─ 2',
       '│  │  └─ 3: null',
-      '│  └─ 4: [object Object]',
+      '│  └─ 4',
       '│     ├─ 5: null',
       '│     └─ 6: null',
-      '└─ 7: [object Object]',
+      '└─ 7',
       '   ├─ 8: null',
       '   └─ 9: null'
     ].join('\n'));
