@@ -72,6 +72,9 @@ const treeify = (tree, _opts = {}) => {
       if (collapsed) {
         return opts.separator + opts.collapsedObject;
       }
+      if (Object.keys(node).length === 0) {
+        return opts.separator + '{}';
+      }
       return ""
     }
     if (Array.isArray(node)) {
@@ -80,6 +83,9 @@ const treeify = (tree, _opts = {}) => {
       }
       if (collapsed) {
         return opts.separator + opts.collapsedArray;
+      }
+      if (node.length === 0) {
+        return opts.separator + '[]';
       }
       return ""
     }
