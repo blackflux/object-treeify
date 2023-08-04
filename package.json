@@ -45,22 +45,22 @@
   },
   "homepage": "https://github.com/blackflux/object-treeify#readme",
   "devDependencies": {
-    "@babel/core": "7.18.10",
-    "@babel/eslint-parser": "7.18.9",
-    "@babel/register": "7.18.9",
-    "@blackflux/eslint-plugin-rules": "2.2.0",
-    "@blackflux/robo-config-plugin": "7.9.11",
-    "@vercel/ncc": "0.34.0",
-    "c8": "7.12.0",
-    "chai": "4.3.6",
-    "eslint": "8.22.0",
+    "@babel/core": "7.22.9",
+    "@babel/eslint-parser": "7.22.9",
+    "@babel/register": "7.22.5",
+    "@blackflux/eslint-plugin-rules": "3.0.0",
+    "@blackflux/robo-config-plugin": "9.1.8",
+    "@vercel/ncc": "0.36.1",
+    "c8": "8.0.1",
+    "chai": "4.3.7",
+    "eslint": "8.46.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-import": "2.28.0",
     "eslint-plugin-json": "3.1.0",
-    "eslint-plugin-markdown": "3.0.0",
+    "eslint-plugin-markdown": "3.0.1",
     "eslint-plugin-mocha": "10.1.0",
-    "js-gardener": "4.0.1",
-    "smart-fs": "3.0.1",
+    "js-gardener": "5.0.1",
+    "smart-fs": "3.0.2",
     "treeify": "1.1.0"
   },
   "licenses": [
@@ -70,7 +70,7 @@
     }
   ],
   "engines": {
-    "node": ">= 12"
+    "node": ">= 16"
   },
   "files": [
     "lib"
