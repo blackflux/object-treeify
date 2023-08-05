@@ -228,12 +228,12 @@
   resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-3.0.0.tgz#f07e6d1b3c7fef59c65c9f5d738d49a0d6cb2e31"
   integrity sha512-gbYlG97hTvyuHrSNpcTQMdQ0RwwQsHcmQQrK5nO00ncinKuOSHk/G9zx3JW3fqXnAyShlvvjFzjSLSsTduvOwA==
 
-"@blackflux/robo-config-plugin@9.1.8":
-  version "9.1.8"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-9.1.8.tgz#c9ce81920170d599485cee7ff067ede88192e969"
-  integrity sha512-PxkDnnaLeStqNgyBFWj3MosB09PISPnmOA56fUBUMAPM3LmjXrzfv+oLCpryibyb/zEE4yzWD3g2c3W7+DMecQ==
+"@blackflux/robo-config-plugin@9.1.9":
+  version "9.1.9"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-9.1.9.tgz#944d727bc3561797b2e84b0d3b964a5b49b63205"
+  integrity sha512-5vTRpQBt6Gybdk+8o2443y7wCLizrbBVgso9MuiD6qlBCCyKOBWAZlfCTsLfZacpmzxdVgXgds86WMgsml956g==
   dependencies:
-    smart-fs "3.0.2"
+    smart-fs "4.0.0"
 
 "@devexpress/error-stack-parser@^2.0.6":
   version "2.0.6"
@@ -3798,6 +3798,20 @@ smart-fs@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-3.0.2.tgz#e7b1cf98694f9527021c588464f7eee67ff96807"
   integrity sha512-j7MPaOM8iP/KPoG2cmDz8WpMJE1XGFMw47GEi8BJZd7KTEeekIMlhdY9n8SNivzcKT4IaVKD620WOtTvlZqYNw==
+  dependencies:
+    fs-extra "11.1.1"
+    js-yaml "4.1.0"
+    json-stringify-pretty-compact "4.0.0"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    object-lib "3.0.1"
+    xml-js "1.6.11"
+    yaml-boost "2.0.1"
+
+smart-fs@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-4.0.0.tgz#3e00bc6f142313b64a4da67021518668010c1531"
+  integrity sha512-LHWWhZkguO759ieNQwjc08RseOsxkH6q439yifFrKCcukz30WF4qYlf+7lS6U/fZbjujJ2kfRvFdF49SEti2ag==
   dependencies:
     fs-extra "11.1.1"
     js-yaml "4.1.0"
