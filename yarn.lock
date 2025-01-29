@@ -249,12 +249,12 @@
     "@eslint/core" "^0.10.0"
     levn "^0.4.1"
 
-"@hapi/hoek@^9.0.0":
+"@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
   integrity sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==
 
-"@hapi/topo@^5.0.0":
+"@hapi/topo@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@hapi/topo/-/topo-5.1.0.tgz#dc448e332c6c6e37a4dc02fd84ba8d44b9afb012"
   integrity sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==
@@ -376,7 +376,7 @@
   resolved "https://registry.yarnpkg.com/@rtsao/scc/-/scc-1.1.0.tgz#927dd2fae9bc3361403ac2c7a00c32ddce9ad7e8"
   integrity sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==
 
-"@sideway/address@^4.1.3":
+"@sideway/address@^4.1.5":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.5.tgz#4bc149a0076623ced99ca8208ba780d65a99b9d5"
   integrity sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==
@@ -2658,47 +2658,40 @@ jackspeak@^4.0.1:
   dependencies:
     "@isaacs/cliui" "^8.0.2"
 
-joi-strict@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-3.0.0.tgz#fb0b60ed1940063d5b2908c8a77989a14de53908"
-  integrity sha512-/kfQQ7CThuVSS6COasbuz59qcjFLickLt4wJ6FBW6qlieR6JPrSHk6wpsMebqRs+sKjDMGBUUmuObXcdhRUK0A==
+joi-strict@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-4.0.0.tgz#b759c0a1d26897cc30d412edb187bfda375c7138"
+  integrity sha512-ZQcbs0kz3EYoNcjkNDipF4YT6tG0EbhFEfIe+5NQa7ioRXJVNxdNHhCDdE3BeEQzf+bSUf2L9WVCPWgR2Urw2w==
   dependencies:
-    joi "17.9.2"
+    joi "17.13.3"
 
-joi-strict@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-3.0.1.tgz#35ef7e1299ddfc9ae1f78138650f2d44fd0c7f3c"
-  integrity sha512-fJgdHdc5xfJFqNub9en9Dh6UPnfSOt5LFSe5Ef6EWne1sZiA08/e50FLgn2JcLY6q3HEW8GA7UIcoqdJykNEmw==
+joi@17.13.3:
+  version "17.13.3"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-17.13.3.tgz#0f5cc1169c999b30d344366d384b12d92558bcec"
+  integrity sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==
   dependencies:
-    joi "17.9.2"
-
-joi@17.9.2:
-  version "17.9.2"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-17.9.2.tgz#8b2e4724188369f55451aebd1d0b1d9482470690"
-  integrity sha512-Itk/r+V4Dx0V3c7RLFdRh12IOjySm2/WGPMubBT92cQvRfYZhPM2W0hZlctjj72iES8jsRCwp7S/cRmWBnJ4nw==
-  dependencies:
-    "@hapi/hoek" "^9.0.0"
-    "@hapi/topo" "^5.0.0"
-    "@sideway/address" "^4.1.3"
+    "@hapi/hoek" "^9.3.0"
+    "@hapi/topo" "^5.1.0"
+    "@sideway/address" "^4.1.5"
     "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
-js-gardener@6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-6.0.2.tgz#ff7217a4dcb1173b45215698035b8f87953f8d01"
-  integrity sha512-Wn42NlWhFaMkgA44TyV9zKu3TnwyajPXSdm+7n83mM8Ceg+rkisIxdh7w+GuxBGEZcsMBrYONex9pwEOFPSjPg==
+js-gardener@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-6.0.3.tgz#ec876e2b9c6e7ec6bfa5c01e499f27051005887f"
+  integrity sha512-2+8yxWWgk7d9dShO8MF7ivVoCuduGJNPkuK3IuC7vTL1wE2xWf/ZsDUgch8N29sL9XDOoq6dCOidizeU3WVIXQ==
   dependencies:
     chalk "5.4.1"
     fancy-log "2.0.0"
     glob "11.0.1"
-    joi-strict "3.0.1"
+    joi-strict "4.0.0"
     js-yaml "4.1.0"
     lodash.difference "4.5.0"
     mocha "11.1.0"
     npm-check "6.0.1"
     plugin-name-to-package-name "0.1.1"
-    robo-config "6.0.1"
-    smart-fs "4.0.1"
+    robo-config "7.0.0"
+    smart-fs "5.0.1"
 
 js-tokens@^3.0.0:
   version "3.0.2"
@@ -3307,10 +3300,10 @@ object-scan@19.0.5:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-19.0.5.tgz#853bc3ba114507123e8df986e63e632e8144c571"
   integrity sha512-5rr03NDQJ3oW4gWamHxON45ZLoFe6VCsRJ+trMlYWXlnYTGsuX/eD6MPp9yItzqFhd0pUpgzPm0jrYoeubIsIA==
 
-object-treeify@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-4.0.0.tgz#89473fafc635862f649dc736f35c353655f8cc7e"
-  integrity sha512-Yj2+O2ng+SUckwuXnWbfXSctkaPRRocK0AOI2uQXzQwwvC82re/0uJyODaobtR8UPOGihKAWjpEkLHlueX02hg==
+object-treeify@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-4.0.1.tgz#f91a7dec795d8275886e7f1bd78408f6975be825"
+  integrity sha512-Y6tg5rHfsefSkfKujv2SwHulInROy/rCL5F4w0QOWxut8AnxYxf0YmNhTh95Zfyxpsudo66uqkux0ACFnyMSgQ==
 
 object.assign@^4.1.2, object.assign@^4.1.7:
   version "4.1.7"
@@ -3863,21 +3856,21 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-robo-config@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-6.0.1.tgz#0d4413f2590eb1ac6a36e82cda271037fd20dc91"
-  integrity sha512-yb8CjBxzzAbWy8SNbYbskWBxuM/drsbZWe2LrZecHB0kn+qqFO7+56dlXpfY8l5uI4AYa96WcNjs3ukd+24oVA==
+robo-config@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-7.0.0.tgz#1c1340f8ae80ab3ffec407103e7fa94f14dfb2e6"
+  integrity sha512-sqk3WnvqLrMBHJj156V6bGOFmrYxUXqEBgbx/nIHZrMZeK+BfRJIA/N3Vi88cH/8VvcEFP83fd6PrQFdxsMwlQ==
   dependencies:
     app-root-path "3.1.0"
     deepmerge "4.3.1"
-    joi-strict "3.0.0"
+    joi-strict "4.0.0"
     lodash.clonedeep "4.5.0"
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     mustache "4.2.0"
-    object-lib "4.0.0"
-    object-scan "19.0.0"
-    object-treeify "4.0.0"
+    object-lib "4.1.1"
+    object-scan "19.0.5"
+    object-treeify "4.0.1"
     smart-fs "4.0.0"
 
 run-async@^2.4.0:
