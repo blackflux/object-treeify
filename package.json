@@ -59,7 +59,7 @@
     "eslint-plugin-json": "4.0.1",
     "eslint-plugin-markdown": "5.1.0",
     "eslint-plugin-mocha": "10.5.0",
-    "js-gardener": "6.0.2",
+    "js-gardener": "6.0.3",
     "smart-fs": "5.0.1",
     "treeify": "1.1.0"
   },
