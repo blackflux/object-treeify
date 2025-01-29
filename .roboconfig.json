@@ -8,7 +8,7 @@
       "packageName": "object-treeify",
       "projectName": "object-treeify",
       "owner": "simlu",
-      "nodeVersion": "16",
+      "nodeVersion": "20",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux",
       "nccEnabled": true
